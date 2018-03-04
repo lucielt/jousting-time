@@ -1,13 +1,13 @@
 @font-face {
-  font-family: '';
-  src: url('') format('woff2'),
+  font-family: 'WeissRundgotisch';
+  src: url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/public/assets/fonts/WeissRundgotisch.woff2') format('woff2'),
        url('') format('woff'),
        url('') format('eot');
        font-weight: normal;
 }
 
-.regular {
-    font-family: '', sans-serif;
+.title {
+    font-family: 'WeissRundgotisch', sans-serif;
 }
 .medium {
     font-family: '', sans-serif;

@@ -1,0 +1,29 @@
+.detail-view .stickyNav.absolute {
+    margin-top: -4em;
+    z-index: 2;
+    padding-bottom: 2em;
+}
+.detail-view .stickyNav {
+    position: relative;
+    margin-top: 0;
+    max-width: 112em;
+    -webkit-transition: max-width .2s ease-in-out;
+    -o-transition: max-width .2s ease-in-out;
+    transition: max-width .2s ease-in-out;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.detail-view .stickyNav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    max-width: 100%;
+    -webkit-box-shadow: 0 2px 17px -2px rgba(0,0,0,.5);
+    box-shadow: 0 2px 17px -2px rgba(0,0,0,.5);
+}
