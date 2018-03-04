@@ -1,0 +1,22 @@
+@font-face {
+  font-family: '';
+  src: url('') format('woff2'),
+       url('') format('woff'),
+       url('') format('eot');
+       font-weight: normal;
+}
+
+.regular {
+    font-family: '', sans-serif;
+}
+.medium {
+    font-family: '', sans-serif;
+}
+.bold {
+    font-family: '', sans-serif;
+}
+
+html,
+input {
+    -webkit-font-smoothing: antialiased;
+}
