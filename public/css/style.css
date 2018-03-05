@@ -1,14 +1,15 @@
 /********************* * VARIBALES * **********************/
 /* --- COLORS --- */
     :root {
-        --orange: #f9b219;
+        --orange: #FD8725;
         --violet: #5c4cff;
-        --blue: #25d1fd;
+        --blue: #7AB3C4;
         --yellow: #faec3a;
-        --red: #e85c41;
+        --red: #E4543C;
         --black: #1d1d1b;
         --light-grey: #f1f1f1;
         --kickstarterBlue: #034752;
+        --grey: #A0A0A0;
     }
     .orange {
         background-color: var(--orange);
@@ -33,6 +34,9 @@
     }
     .kickstarterBlue {
         background-color: var(--kickstarterBlue);
+    }
+    .grey{
+        background-color: var(--grey);
     }
 /* --- POSITIONING --- */
     .relative {
@@ -126,7 +130,10 @@ h1, h2, h3, h4, h5 {
     font-family: 'WeissRundgotisch', sans-serif;
 }
 h1 {
-    font-size: 10em;
+    font-size: 9em;
+}
+h2 {
+    font-size: 4em;
 }
 h4 {
     font-size: 1.2em;
@@ -136,17 +143,21 @@ h4 {
     height: 100vh;
 }
 .intro-wrapper{
-    display: inline-block;
+    display: flex;
     position: absolute;
+    /* margin: auto; */
     top: 0;
     height: 75vh;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
 
     background-image: url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/public/assets/images/emojis.jpg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+}
+.title{
+    margin: auto;
 }
 .menuContainer{
     position: absolute;
@@ -165,6 +176,7 @@ h4 {
     max-width: 80vw;
     height: 100%;
     margin: auto;
+    box-shadow: 0 16px 58px rgba(63, 49, 178, .08), 0 4px 14px rgba(63, 49, 178, .04);
 }
 .menu ul li{
     width: 25%;
@@ -176,6 +188,9 @@ h4 {
     font-size: 1.5em;
     padding-top: 1.5%;
 }
+.menu ul li a{
+    color: var(--light-grey);
+}
 .menu ul li:nth-of-type(2) {
   padding-top: 0;
 }
@@ -183,8 +198,12 @@ h4 {
     width: 100%;
     height: 100%;
     display: flex;
+    padding: 5%;
+}
+.menu ul li:nth-of-type(2) .menuItems{
     justify-content: center;
     align-items: center;
+        padding: 0;
 }
 /*.seeMore {
     position: absolute;
@@ -199,8 +218,12 @@ h4 {
     width: 80vw;
     height: 25%;
     margin: auto;
-    text-align: center;
     padding-top: 1%;
+    display: flex;
+    justify-content: flex-end;
+}
+.seeMore a{
+    width: 75%;
 }
 .seeMore h4{
     color: #000;
@@ -235,8 +258,13 @@ h4 {
 
 /********************* * SECTION : DEMO VIDEO * **********************/
 .demoVideoContainer{
-    width:75%;
+    width: 100%;
     height: auto;
+    text-align: center;
+}
+.videoTitle{
+    text-align: center;
+    padding: 5vh 0;
 }
 
 /********************* * SECTION : KEY FEATURES * **********************/
