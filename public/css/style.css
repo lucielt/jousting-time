@@ -1,43 +1,59 @@
 /********************* * VARIBALES * **********************/
 /* --- COLORS --- */
     :root {
+        /* -- old
         --orange: #FD8725;
         --violet: #5c4cff;
         --blue: #7AB3C4;
-        --yellow: #faec3a;
+        --marine: #252830;
+        --yellow: #fec32e;
+        --yellowTrebuchet: #faec3a;
         --red: #E4543C;
         --black: #1d1d1b;
         --light-grey: #f1f1f1;
-        --kickstarterBlue: #034752;
         --grey: #A0A0A0;
+        */
+
+        /* Couleurs du logo */
+        --yellow-dark: #ffce00;
+        --yellow-light: #fdf287;
+        --blue-dark: #2e4898;
+        /* REAL --blue-light: #5f7cda; */
+        --blue-light: #1ac2fe;
+        --dark-grey: #8f91ad;
+        --medium-grey: #c2c2c2;
+        --light-grey: #e7e7e7;
+
+        /* Couleurs autres */
+        --kickstarterBlue: #034752;
+        --yellowTrebuchet: #faec3a;
+        --violetTrebuchet: #5c4cff;
     }
-    .orange {
-        background-color: var(--orange);
+    .yellow-dark {
+        background-color: var(--yellow-dark);
     }
-    .violet {
-        background-color: var(--violet);
+    .yellow-light {
+        background-color: var(--yellow-light);
     }
-    .blue {
-        background-color: var(--blue);
+    .blue-dark {
+        background-color: var(--blue-dark);
     }
-    .yellow {
-        background-color: var(--yellow);
+    .blue-light {
+        background-color: var(--blue-light);
     }
-    .red {
-        background-color: var(--red);
+    .dark-grey {
+        background-color: var(--dark-grey);
     }
-    .black {
-        background-color: var(--black);
+    .medium-grey {
+        background-color: var(--edium-grey);
     }
     .light-grey {
         background-color: var(--light-grey);
     }
-    .kickstarterBlue {
+    .kickstarter.blue {
         background-color: var(--kickstarterBlue);
     }
-    .grey{
-        background-color: var(--grey);
-    }
+
 /* --- POSITIONING --- */
     .relative {
         position: relative;
@@ -111,6 +127,7 @@
 body {
     font-size: 16px;
     background-color: var(--light-grey);
+    font-family: 'Karla', sans-serif;
 }
 section{
     padding-bottom: 5vh;
@@ -127,16 +144,24 @@ a {
     text-decoration: none;
 }
 h1, h2, h3, h4, h5 {
-    font-family: 'WeissRundgotisch', sans-serif;
+    font-family: 'whisky_1780', sans-serif;
 }
 h1 {
-    font-size: 9em;
+    font-size: 5em;
+    transform: skewY(-10deg);
 }
 h2 {
     font-size: 4em;
+    /*
+    transform: skewY(-10deg);
+    */
 }
 h4 {
     font-size: 1.2em;
+}
+p {
+    font-size: 0.8em;
+    line-height: 1.2em;
 }
 /********************* * SECTION : INTRO * **********************/
 #intro {
@@ -148,16 +173,17 @@ h4 {
     /* margin: auto; */
     top: 0;
     height: 75vh;
-    width: 100%;
+    width: 90%;
     /* text-align: center; */
 
-    background-image: url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/public/assets/images/emojis.jpg');
+    background-image: url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/public/assets/images/screen2.jpg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
 }
-.title{
-    margin: auto;
+.title {
+    margin: 40vh auto;
+    color: var(--yellow-light);
 }
 .menuContainer{
     position: absolute;
@@ -176,7 +202,7 @@ h4 {
     max-width: 80vw;
     height: 100%;
     margin: auto;
-    box-shadow: 0 16px 58px rgba(63, 49, 178, .08), 0 4px 14px rgba(63, 49, 178, .04);
+    box-shadow: 0 25px 30px rgba(63, 49, 178, .08), 0 4px 14px rgba(63, 49, 178, .04);
 }
 .menu ul li{
     width: 25%;
@@ -184,16 +210,52 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'WeissRundgotisch', sans-serif;
+    /*font-family: 'whisky_1780', sans-serif;*/
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
     font-size: 1.5em;
     padding-top: 1.5%;
 }
-.menu ul li a{
-    color: var(--light-grey);
-}
 .menu ul li:nth-of-type(2) {
-  padding-top: 0;
+    font-family: 'whisky_1780', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    padding-top: 0;
+    font-size: 2em;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: var(--yellow-light);
 }
+.menu ul li:nth-of-type(1) .menuItems {
+    background-color: var(--yellow-light);
+}
+.menu ul li:nth-of-type(2) .menuItems {
+    background-color: var(--blue-light);
+}
+.menu ul li:nth-of-type(3) .menuItems{
+    background-color: var(--yellow-dark);
+}
+.menu ul li:nth-of-type(4) .menuItems{
+    background-color: var(--yellowTrebuchet);
+}
+.menu ul li a{
+    color: var(--blue-dark);
+}
+.menu ul li:nth-of-type(2) a{
+    color: var(--yellow-light);
+}
+/*
+.menu ul li:nth-of-type(2) p {
+    transform: skewY(-10deg);
+}
+.menu ul li:nth-of-type(2) a:before{
+    content: 'Support us';
+    position: absolute;
+    z-index: -1;
+    letter-spacing: 0px;
+    margin: 0px 0px;
+    -webkit-text-stroke: 8px;
+    -webkit-text-stroke-color: var(--yellow-dark);
+}*/
 .menuItems{
     width: 100%;
     height: 100%;
@@ -203,7 +265,13 @@ h4 {
 .menu ul li:nth-of-type(2) .menuItems{
     justify-content: center;
     align-items: center;
-        padding: 0;
+    padding: 0;
+}
+#campaign .kickstarter a {
+  -webkit-animation: SCALE 10s infinite; /* Safari 4+ */
+  -moz-animation:    SCALE 10s infinite; /* Fx 5+ */
+  -o-animation:      SCALE 10s infinite; /* Opera 12+ */
+  animation:         SCALE 10s infinite; /* IE 10+, Fx 29+ */
 }
 /*.seeMore {
     position: absolute;
@@ -216,51 +284,89 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     width: 80vw;
-    height: 25%;
+    height: auto;
     margin: auto;
-    padding-top: 1%;
+    padding-top: 0px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .seeMore a{
-    width: 75%;
+    width: 25%;
+    text-align: right;
+    padding-right: 1.5em;
 }
 .seeMore h4{
-    color: #000;
+    color: var(--blue-dark);
     display: inline;
-    /* padding-right: .5em; */
+    padding-right: .5em;
     position: relative;
+    top: 0.85em;
     /* top: -0.7em; */
     /* left: -10.7em; */
 }
-.seeMore span{
-    height: 100%;
-    width: auto;
-    background: #000;
-    padding: 6px 8px;
+.icon-down-arrow{
+    height: 50px;
+    width: 50px;
+    background: var(--blue-dark);
     border-radius: 50%;
     position: relative;
-    /* left: -10.7em; */
-}
-
-.icon-down-arrow{
     display: inline-block;
-    -webkit-animation: bounce .8s ease-in-out infinite;
-    animation: bounce .8s ease-in-out infinite;
+    text-align: center;
+}
+.icon-down-arrow span{
+    font-family: 'whisky_1780';
+    color: var(--yellow-light);
+    -webkit-text-stroke: 8px;
+
+    position: relative;
+    /*top: 0.9em;*/
+    -webkit-animation: UP_DOWN .8s ease-in-out infinite;
+    -moz-animation: UP_DOWN .8s ease-in-out infinite;
+    -o-animation: UP_DOWN .8s ease-in-out infinite;
+    animation: UP_DOWN .8s ease-in-out infinite;
 }
 .icon-down-arrow svg{
+    height: 80%;
     width: auto;
-    height: 100%;
 }
 #icon-down-arrow{
-    fill:var(--yellow);
+    fill: var(--yellow-light);
+    stroke: var(--yellow-dark);
 }
 
 /********************* * SECTION : DEMO VIDEO * **********************/
+#demoVideo {
+    position: relative;
+    background: linear-gradient(#e7e7e7, #c2c2c2);
+}
+#demoVideo h2 {
+    color: var(--blue-light);
+    -webkit-text-fill-color: var(--blue-light); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: var(--yellow-dark);
+    /*
+    transform: skewY(-10deg);
+    */
+
+}
+#demoVideo h2:before {
+    content: "Jousting your ass";
+    position: absolute;
+    letter-spacing: 0px;
+    margin: 0px 0px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: var(--yellow-light);
+}
 .demoVideoContainer{
     width: 100%;
-    height: auto;
+    height: 75vh;
     text-align: center;
+    margin-bottom: 5vh;
+}
+.demoVideoContainer iframe{
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
 }
 .videoTitle{
     text-align: center;
@@ -268,7 +374,210 @@ h4 {
 }
 
 /********************* * SECTION : KEY FEATURES * **********************/
+#keyFeatures {
+    background: linear-gradient(to top right, #ffce00, #fdf287);
+}
+.awards {
+    width: 100%;
+    height: 12em;
+    display: flex;
+    justify-content: center;
+}
+.awardsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+.awardItem {
+    height: 100%;
+    width: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.awardItem:nth-of-type(3) {
+    width: 40%;
+    font-size: 2em;
+}
+.awardItem img {
+    height: 50%;
+    width: auto;
+    margin: auto;
+}
+.keyFeatures {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.sectionTitle {
+    padding: 2em;
+    margin: auto;
+    position: relative;
+}
+#keyFeatures h2 {
+    color: var(--yellow-light);
+    /*
+    transform: skewY(-10deg);
+    */
+    -webkit-text-stroke: 10px;
+    -webkit-text-stroke-color: var(--blue-dark);
+}
+#keyFeatures h2:before {
+    content: "Key features";
+    position: absolute;
+    letter-spacing: 0px;
+    margin: 0px 0px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: var(--blue-light);
+}
+.keyWrapper {
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+.keyItem {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+}
+.keyText {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.keyText p {
+    margin: auto;
+    width: 33%;
+}
+.keyText.left p{
+    padding-right: 5%;
+}
+.keyText.right p{
+    padding-left: 5%;
+}
+.keyImg {
+        width: 40%;
+        text-align: center;
+}
+.keyImg.right {
 
+}
+.keyImg.left {
+
+}
 /********************* * SECTION : FOUNDING * **********************/
 
 /********************* * SECTION : ABOUT * **********************/
+#about{
+    color: var(--yellowTrebuchet);
+    background-color: var(--violetTrebuchet);
+    display: flex;
+    flex-direction: column;
+}
+#about h2 {
+    color: var(--violetTrebuchet);
+    -webkit-text-stroke: 10px;
+    -webkit-text-stroke-color: var(--yellow-dark);
+}
+#about h2:before {
+    content: "Who we are";
+    position: absolute;
+    letter-spacing: 0px;
+    margin: 0px 0px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: var(--yellow-light);
+}
+.compagnieTitle{
+    text-align: center;
+    padding: 5vh 0;
+}
+.author{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 80%;
+    margin: auto;
+}
+.employee{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    padding: 0 7vh;
+}
+.employeeImg{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin: 0 auto 2vh auto;
+}
+.employeeImg img{
+    width: 100%;
+    height: auto;
+}
+.employeeRole{
+    text-align: center;
+}
+.employeeRole p:nth-of-type(3) {
+    text-align: left;
+    padding-top: 2vh;
+    color: var(--light-grey);
+}
+.name{
+    font-family: 'whisky_1780', sans-serif;
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+    color: var(--light-grey);
+}
+.label {
+    font-weight: bold;
+}
+
+/********************* * ANIMATION * **********************/
+
+@-webkit-keyframes SCALE {
+    0%   { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+@-moz-keyframes SCALE {
+    0%   { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+@-o-keyframes SCALE {
+    0%   { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+@keyframes SCALE {
+    0%   { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@-webkit-keyframes UP_DOWN {
+    0%   { top: 0.85em; }
+    50% { top: 1.45em; }
+    100% { top: 0.85em; }
+}
+@-moz-keyframes UP_DOWN {
+    0%   { top: 0.85em; }
+    50% { top: 1.45em; }
+    100% { top: 0.85em; }
+}
+@-o-keyframes UP_DOWN {
+    0%   { top: 0.85em; }
+    50% { top: 1.45em; }
+    100% { top: 0.85em; }
+}
+@keyframes UP_DOWN {
+    0%   { top: 0.85em; }
+    50% { top: 1.45em; }
+    100% { top: 0.85em; }
+}
