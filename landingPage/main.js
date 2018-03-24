@@ -44,10 +44,17 @@ var launch = new Date('04/02/2018 10:1 AM');
 initializeClock('clockdiv', launch);
 
 /* Style heigh */
-var clocktimediv = document.querySelectorAll('.clocktime');
-clocktimediv.forEach((unit) => {
-        var clocktimeWidth = unit.offsetWidth;
-        console.log('width'+clocktimeWidth);
-        unit.style.paddingTop = ((clocktimeWidth-30)/2)+'px';
-        unit.style.paddingBottom = ((clocktimeWidth-30)/2)+'px';
+function clockHeight(){
+    var clocktimediv = document.querySelectorAll('.clocktime');
+    clocktimediv.forEach((unit) => {
+            var clocktimeWidth = unit.offsetWidth;
+            console.log('width'+clocktimeWidth);
+            unit.style.paddingTop = ((clocktimeWidth-30)/2)+'px';
+            unit.style.paddingBottom = ((clocktimeWidth-30)/2)+'px';
+    });
+}
+window.addEventListener('resize', function(event){
+  // do stuff here
+  clockHeight();
 });
+clockHeight();
