@@ -15,6 +15,10 @@
     }
     #clockdiv {
         width: 80%;
+        font-size: 2em;
+    }
+    .smalltext{
+        font-size: 14px;
     }
     #socialdiv {
         width: 50%;
@@ -53,6 +57,7 @@
     */
     #clockdiv {
         width: 100%;
+        font-size: 1.5em;
     }
     #socialdiv {
         width: 80%;
