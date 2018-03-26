@@ -34,13 +34,26 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
+      var kickstarterTitle = document.querySelector('.kicktitle');
+      kickstarterTitle.innerHTML = 'Join us on Kickstarter';
+      var titleDiv = document.getElementById('countdownSection');
+      titleDiv.querySelector('.title').style.marginBottom = 5 + '%';
+      var clock = document.getElementById('clockdiv').childNodes;
+      console.log(clock);
+      for(i = 0; i < (clock.length-1); i++){
+        if(clock[i].tagName == 'DIV'){
+            clock[i].style.display = "none";
+        }
+      }
+      var kickstarterBtn = document.querySelector('.btn');
+      kickstarterBtn.style.display = "flex";
     }
   }
 
   updateClock();
   var timeinterval = setInterval(updateClock, 1000);
 }
-var launch = new Date('04/02/2018 10:1 AM');
+var launch = new Date('04/02/2018 12:00 AM');
 initializeClock('clockdiv', launch);
 
 /* Style heigh */

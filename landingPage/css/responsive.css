@@ -49,17 +49,17 @@
     .logo img {
         width: 100%;
     }
-
-    /*
-    .angle-blue:after {
-        bottom: -20px;
-    }
-    */
     #clockdiv {
         width: 100%;
         font-size: 1.5em;
     }
+
     #socialdiv {
         width: 80%;
+    }
+}
+@media (min-width: 960px){
+    #clockdiv .btn {
+        font-size: 0.6em;
     }
 }
