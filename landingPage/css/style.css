@@ -1,292 +1,233 @@
 /* FONT -------------------------------------------------------------------- */
 @font-face {
-  font-family: 'whisky_1780';
-  src: url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/landingPage/assets/fonts/whisky_1780.woff2') format('woff2'),
-       url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/landingPage/assets/fonts/whisky_1780.woff') format('woff'),
-       url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/landingPage/assets/fonts/whisky_1780.eot') format('eot');
-       font-weight: normal;
+	font-family: 'whisky_1780';
+	src: url('../assets/fonts/whisky_1780.woff2') format('woff2'),
+	url('../assets/fonts/whisky_1780.woff') format('woff'),
+	url('../assets/fonts/whisky_1780.eot') format('eot');
+	font-weight: normal;
 }
 /* VARIABLES---------------------------------------------------------------- */
 :root {
-    /* Couleurs du logo */
-    --orange:#ff7700;
-    --yellow-dark: #ffcc00;
-    --yellow-light: #fff288;
-    --blue-dark: #224499;
-    --blue-light: #2288ee;
-    --blue-ultra-light: #88ccff;
-    --grey-dark: #8899aa;
-    --grey-light: #c6c6c6;
-    --grey-ultra-light: #e7e7e7;
+	/* Couleurs du logo */
+	--orange:#ff7700;
+	--yellow-dark: #ffcc00;
+	--yellow-light: #fff288;
+	--blue-dark: #224499;
+	--blue-light: #2288ee;
+	--blue-ultra-light: #88ccff;
+	--grey-dark: #8899aa;
+	--grey-light: #c6c6c6;
+	--grey-ultra-light: #e7e7e7;
 
 
-    /* Couleurs autres */
-    --kickstarterBlue: #034752;
-    --yellowTrebuchet: #faec3a;
-    --violetTrebuchet: #5c4cff;
+	/* Couleurs autres */
+	--kickstarterBlue: #034752;
+	--yellowTrebuchet: #faec3a;
+	--violetTrebuchet: #5c4cff;
 }
 /* BASE--------------------------------------------------------------------- */
 body {
-    font-size: 16px;
-    font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
 }
 h1, h2, h3, h4, h5 {
-    font-family: 'whisky_1780', sans-serif;
+	font-family: 'whisky_1780', sans-serif;
 }
 h1 {
-    font-size: 5em;
-    transform: skewY(-10deg);
+	font-size: 5em;
+	transform: skewY(-10deg);
 }
 h2 {
-    font-size: 3em;
-    /* transform: skewY(-10deg); */
-    padding-bottom: 0.2em;
+	font-size: 3em;
+	padding-bottom: 0.2em;
 }
 h3{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 2em;
-    font-weight: 600;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 2em;
+	font-weight: 600;
 }
 .flexColCen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .flexRow {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 /* SECTION 1---------------------------------------------------------------- */
 #videoSection{
-    background: linear-gradient(#2288ee, #224499);
-    /*
-    background-color: var(--blue-light);
-    */
-    padding: 5% 0 5% 0;
+	background: linear-gradient(#2288ee, #224499);
+	padding: 3vh 0 3vh 0;
 }
 .logo {
-    width: 40%;
-    text-align: center;
-    margin-bottom: 5%;
+	width: 40%;
+	text-align: center;
+	margin-bottom: 3vh;
 }
 .logo img {
-    width: 50%;
-    height: auto;
+	width: 50%;
+	height: auto;
 }
 .title {
-    margin: 0px 0 15% 0;
+	margin: 0px 0 15% 0;
 }
+
 .videodiv{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+	/*! display: flex; */
+	justify-content: space-between;
+	width: 100%;
 }
+
 .video {
-    width: 100%;
-    text-align: center;
+	width: 100%;
+	position: relative;
+	padding-bottom: 41.667%; /* https://en.wikipedia.org/wiki/Anamorphic_format */
+	height: 0;
 }
-.aside {
-    display: flex;
-    font-family: whisky_1780;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding: 0;
-    color: var(--blue-ultra-light);
-    overflow: hidden;
-    /*
-    box-shadow: 0 0 15px 5px black;
-    width: 10%;
-    background: gray;
-    */
-}
-.aside p {
-    white-space: nowrap;
-    transform: rotate(90deg);
-}
-.bis p {
-    transform:rotate(-90deg);
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 /* SECTION 2---------------------------------------------------------------- */
 #countdownSection{
-    background-color: var(--blue-dark);
-    text-align: center;
-    position: relative;
-    padding: 0 0 5% 0;
+	background-color: var(--blue-dark);
+	text-align: center;
+	position: relative;
+	padding: 0 0 5% 0;
 }
 .angle-blue:after {
-    background-color: var(--blue-dark);
+	background-color: var(--blue-dark);
 }
 .angle-blue:after {
-    position: absolute;
-    z-index: 1;
-    bottom: -5vw;
-    left: 0;
-    width: 100%;
-    height: 70%;
-    content: '';
-    -webkit-transform: skewY(-5deg);
-    -ms-transform: skewY(-5deg);
-    transform: skewY(-5deg);
-    -webkit-box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
-    -moz-box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
-    box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
-    /*
-    -webkit-box-shadow: 0px 10px 104px -8px rgba(255,204,0,0.81);
-    -moz-box-shadow: 0px 10px 104px -8px rgba(255,204,0,0.81);
-    box-shadow: 0px 10px 104px -8px rgba(255,204,0,0.81);
-    */
+	position: absolute;
+	z-index: 1;
+	bottom: -5vw;
+	left: 0;
+	width: 100%;
+	height: 70%;
+	content: '';
+	-webkit-transform: skewY(-5deg);
+	-ms-transform: skewY(-5deg);
+	transform: skewY(-5deg);
+	-webkit-box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+	-moz-box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+	box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
 }
 #countdownSection .title{
-    color: var(--blue-ultra-light);
-    /*
-    -webkit-text-fill-color: trasparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color:  var(--blue-ultra-light);
-    */
+	color: var(--blue-ultra-light);
 }
 #clockdiv {
 	color: var(--blue-dark);
 	display: flex;
-    width: 50%;
-    /*
-    height: 200px;
-    */
-    font-family: 'whisky_1780', sans-serif;
+	width: 50%;
+	font-family: 'whisky_1780', sans-serif;
 	font-weight: 100;
 	text-align: center;
 	font-size: 3vw;
-    position: relative;
-    z-index: 5;
+	position: relative;
+	z-index: 5;
 }
 
 #clockdiv > div{
 	border-radius: 3px;
-    /*
-    padding: 10px;
-	background: var(--blue-ultra-light);
-    */
 	width: 25%;
-    margin: 0 10px;
+	margin: 0 10px;
 }
 
 #clockdiv div > .clocktime{
-    /*padding: 15px;*/
-    border-radius: 3px;
-    background-image: url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/landingPage/assets/images/clockBckg.svg');
-    background-position: center;
-    background-size: 90%;
-    background-repeat: no-repeat;
-    /*
-    background: var(--yellow-light);
-    */
-    width: 100%;
-    margin: auto;
+	border-radius: 3px;
+	background-image: url('../assets/images/clockBckg.svg');
+	background-position: center;
+	background-size: 90%;
+	background-repeat: no-repeat;
+	width: 100%;
+	margin: auto;
 }
 
 .smalltext{
-    color: var(--blue-ultra-light);
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 300;
-    padding-top: 15px;
-    font-size: 2vw;
+	color: var(--blue-ultra-light);
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	padding-top: 15px;
+	font-size: 2vw;
 }
 #clockdiv .btn {
-    background-color: var(--blue-light);
-    padding: 3%;
-    display: none;
-    width: 300px;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+	background-color: var(--blue-light);
+	padding: 3%;
+	display: none;
+	width: 300px;
+	align-items: center;
+	margin: auto;
+	justify-content: center;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 24px;
+	font-weight: 600;
 }
 #clockdiv .btn a{
-    text-decoration: none;
-    color: var(--yellow-light);
+	text-decoration: none;
+	color: var(--yellow-light);
 }
 
 /* SECTION 3---------------------------------------------------------------- */
 
 #socialSection{
-    background-color: var(--yellow-light);
-    text-align: center;
-    padding: 10% 0 5% 0;
+	background-color: var(--yellow-light);
+	text-align: center;
+	padding: 10% 0 5% 0;
 }
 #socialSection .title{
-    color: var(--blue-dark);
-    transform: skewY(-5deg);
-}
-#socialSection .title h2{
-    -webkit-text-stroke-width: 8px;
-    -webkit-text-stroke-color: var(--yellow-dark);
-    /*
-    -webkit-text-fill-color: var(--blue-light);
-    */
-}
-#socialSection .title h2:before{
-    content: "Stay tuned";
-    position: absolute;
-    letter-spacing: 0px;
-    margin: 0px 0px;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: var(--yellow-light);
+	color: var(--blue-dark);
+	transform: skewY(-5deg);
 }
 #socialdiv {
 	display: flex;
-    align-content: center;
-    width: 30%;
+	align-content: center;
+	width: 30%;
 }
 #socialdiv > div{
 	border-radius: 3px;
-	/*
-    background: var(--blue-ultra-light);
-    */
-    padding: 10px;
+	padding: 10px;
 	width: 25%;
-    margin: auto;
+	margin: auto;
 }
 #socialdiv .st0{
-    fill: var(--yellow-light);
+	fill: var(--yellow-light);
 }
 #socialdiv .st1{
-    fill: var(--blue-light);
+	fill: var(--blue-light);
 }
 #socialdiv a:hover .st1{
-    fill:var(--blue-dark);
+	fill:var(--blue-dark);
 }
 
 /* FOOTER ------------------------------------------------------------------ */
 footer{
-    padding: 20px;
-    text-align: center;
-    background-color: var(--grey-ultra-light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	padding: 20px;
+	text-align: center;
+	background-color: var(--grey-ultra-light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .trebuchetLogo {
-    height: 50px;
-    padding-right: 10px;
-    /*
-    margin-bottom: 20px;
-    */
+	height: 50px;
+	padding-right: 10px;
 }
 .trebuchetLogo svg{
-    height: 100%;
-    width: auto;
+	height: 100%;
+	width: auto;
 }
 .trebuchetLogo svg g{
-    fill: var(--grey-dark);
+	fill: var(--grey-dark);
 }
 .copyright {
-    color: var(--grey-dark);
-    font-size: 0.8em;
-    font-weight: 200;
-    padding-left: 10px;
+	color: var(--grey-dark);
+	font-size: 0.8em;
+	font-weight: 200;
+	padding-left: 10px;
 }

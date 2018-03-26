@@ -37,7 +37,7 @@ function initializeClock(id, endtime) {
       var kickstarterTitle = document.querySelector('.kicktitle');
       kickstarterTitle.innerHTML = 'Join us on Kickstarter';
       var titleDiv = document.getElementById('countdownSection');
-      titleDiv.querySelector('.title').style.marginBottom = 5 + '%';
+      titleDiv.querySelector('.title').style.marginBottom = '3vh';
       var clock = document.getElementById('clockdiv').childNodes;
       console.log(clock);
       for(i = 0; i < (clock.length-1); i++){
@@ -53,7 +53,7 @@ function initializeClock(id, endtime) {
   updateClock();
   var timeinterval = setInterval(updateClock, 1000);
 }
-var launch = new Date('04/02/2018 12:00 AM');
+var launch = new Date(Date.UTC(2018, 3, 02, 16));
 initializeClock('clockdiv', launch);
 
 /* Style heigh */
