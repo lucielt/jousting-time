@@ -1,3 +1,8 @@
+@media (min-width: 960px){
+    .seeMore {
+    left: 12vw;
+    }
+}
 @media (max-width: 960px){
     h1 {
         font-size: 6em;
@@ -8,16 +13,6 @@
     }
     .menu ul li:nth-last-child(-n+2){
         display:none;
-    }
-    .seeMore {
-        padding-top: 5%;
-    }
-    .seeMore a {
-        width: 100%;
-        text-align: center;
-    }
-    .awardsWrapper {
-        width: 90%;
     }
     .keyText {
         flex-direction: column;
@@ -32,14 +27,79 @@
         width: 100%;
         padding-bottom: 5%;
     }
+    .author {
+        width: 90%;
+    }
 }
 @media (max-width: 800px){
     h1 {
         font-size: 6em;
     }
+    h2 {
+        font-size: 3em;
+    }
+    .awardsWrapper {
+        width: 100vw;
+        padding: 20px 5px;
+    }
+    .awardItem {
+        padding: 0 10px;
+    }
+    .keyWrapper{
+        flex-direction: column;
+    }
+    .imgWrapper {
+        margin-top: 0;
+        margin-bottom: 7vh;
+    }
+    .compagnieTitle {
+        text-align: left;
+    }
+    #about h2{
+        padding-left: 25%;
+        transform: skewY(0deg);
+    }
+    .author {
+        flex-direction: column;
+    }
+    .employee{
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+        padding: 5vh 0;
+    }
+    .employeeImg{
+        margin: 0 3vh 0 0;
+    }
+    .employeeRole{
+        flex-basis: 75%;
+        text-align: left;
+    }
 }
 @media (max-width: 600px){
-h1 {
+    h1 {
         font-size: 4em;
+    }
+    h2 {
+        -webkit-text-stroke-width: 1px;
+
+    }
+    .awardItem {
+        padding: 0 5px;
+    }
+    #about h2{
+        padding-left: 7.5%;
+    }
+    .employeeImg{
+        display: none;
+    }
+    .employeeRole{
+        flex-basis: 85%;
+    }
+}
+@media (max-width: 480px){
+    h2 {
+        font-size: 2em;
+            -webkit-text-stroke-width: 0.5px;
     }
 }

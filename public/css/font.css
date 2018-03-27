@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'whisky_1780';
-  src: url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/public/assets/fonts/whisky_1780.woff2') format('woff2'),
-       url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/public/assets/fonts/whisky_1780.woff') format('woff'),
-       url('/Users/lucieletouze/Projets/Mandat/201803-joustingTime/04_developpement/public/assets/fonts/whisky_1780.eot') format('eot');
+  src: url('../assets/fonts/whisky_1780.woff2') format('woff2'),
+       url('../assets/fonts/whisky_1780.woff') format('woff'),
+       url('../assets/fonts/whisky_1780.eot') format('eot');
        font-weight: normal;
 }
 .titleFont {
