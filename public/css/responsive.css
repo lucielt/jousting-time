@@ -2,14 +2,22 @@
     .seeMore {
     left: 12vw;
     }
+    #facebook:hover,
+    #twitter:hover,
+    #instagram:hover
+    {
+        padding: 0;
+    }
+    .clear .button:hover {
+        font-size: 110%;
+    }
 }
 @media (max-width: 960px){
     h1 {
         font-size: 6em;
     }
-
     .menu ul li {
-        width: 50%;
+        flex-basis: 50%;
     }
     .menu ul li:nth-last-child(-n+2){
         display:none;
@@ -38,6 +46,17 @@
     h2 {
         font-size: 3em;
     }
+    .menu ul li {
+        flex-basis: 100%;
+    }
+    .menu ul li:nth-child(1){
+        display:none;
+    }
+    #about h2,
+    #socialSection h2
+    {
+        -webkit-text-stroke-width: 1px;
+    }
     .awardsWrapper {
         width: 100vw;
         padding: 20px 5px;
@@ -50,7 +69,10 @@
     }
     .imgWrapper {
         margin-top: 0;
-        margin-bottom: 7vh;
+        margin-bottom: 5vh;
+    }
+    #socialdiv {
+        width: 50%;
     }
     .compagnieTitle {
         text-align: left;
@@ -80,12 +102,11 @@
     h1 {
         font-size: 4em;
     }
-    h2 {
-        -webkit-text-stroke-width: 1px;
-
-    }
     .awardItem {
         padding: 0 5px;
+    }
+    #socialdiv {
+        width: 80%;
     }
     #about h2{
         padding-left: 7.5%;

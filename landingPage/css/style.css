@@ -204,7 +204,55 @@ h3{
 #socialdiv a:hover .st1{
 	fill:var(--blue-dark);
 }
-
+/* MAILCHIMP --------------------------------------------------------------- */
+input {
+    outline: none;
+}
+#mc_embed_signup{
+    background-color: var(--yellow-light);
+    color: var(--blue-dark);
+    font-family: ubuntu;
+}
+#mc_embed_signup h3{
+    padding: 20px 0;
+}
+#mc_embed_signup form{
+    margin: auto;
+    max-width: 500px;
+}
+#mc_embed_signup_scroll {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.mc-field-group{
+    flex-basis: 75%
+}
+.mc-field-group input {
+    width: 100%;
+    height: 5vh;
+    max-height: 40px;
+    padding: 10px;
+    border: solid 1px var(--blue-light);
+    border-radius: 5px 0 0 5px;
+}
+.clear {
+    flex-basis: auto;
+}
+.clear input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    background-color: var(--blue-light);
+    color: var(--yellow-light);
+    border-radius: 0 5px 5px 0;
+    border: solid 1px var(--blue-light);
+}
+.clear .button:hover {
+    background-color: var(--blue-dark);
+    border-color: var(--blue-dark);
+}
 /* FOOTER ------------------------------------------------------------------ */
 footer{
 	padding: 20px;
