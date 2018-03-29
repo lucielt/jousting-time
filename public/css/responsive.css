@@ -1,6 +1,18 @@
 @media (min-width: 960px){
+    .kick-logo img {
+        -webkit-animation: SCALE 5s infinite;
+        -moz-animation: SCALE 5s infinite;
+        -o-animation: SCALE 5s infinite;
+        animation: SCALE 5s infinite;
+    }
     .seeMore {
     left: 12vw;
+    }
+    .icon-down-arrow span{
+        -webkit-animation: UP_DOWN .8s ease-in-out infinite;
+        -moz-animation: UP_DOWN .8s ease-in-out infinite;
+        -o-animation: UP_DOWN .8s ease-in-out infinite;
+        animation: UP_DOWN .8s ease-in-out infinite;
     }
     #facebook:hover,
     #twitter:hover,
@@ -22,24 +34,18 @@
     .menu ul li:nth-last-child(-n+2){
         display:none;
     }
-    .keyText {
-        flex-direction: column;
-    }
-    .keyText.left p{
-        padding-right: 0;
-    }
-    .keyText.right p{
-        padding-left: 0;
-    }
-    .keyText p {
-        width: 100%;
-        padding-bottom: 5%;
-    }
-    .author {
-        width: 90%;
-    }
+
 }
 @media (max-width: 800px){
+    #intro {
+        height: 75vh;
+    }
+    .intro-wrapper{
+        height: 50vh;
+    }
+    #intro .title img {
+        margin-left: 0;
+    }
     h1 {
         font-size: 6em;
     }
@@ -70,32 +76,26 @@
     .imgWrapper {
         margin-top: 0;
         margin-bottom: 5vh;
+        display:none;
+    }
+    .imgWrapper.left {
+        padding-right: 20px;
+    }
+    .imgWrapper .right{
+        padding-left: : 0;
+    }
+    .keyImg img {
+        max-height: 30vh;
     }
     #socialdiv {
         width: 50%;
     }
-    .compagnieTitle {
-        text-align: left;
-    }
-    #about h2{
-        padding-left: 25%;
-        transform: skewY(0deg);
-    }
-    .author {
+    .description{
         flex-direction: column;
+        width: 60vw;
     }
-    .employee{
-        flex-direction: row;
-        align-items: flex-start;
-        width: 100%;
-        padding: 5vh 0;
-    }
-    .employeeImg{
-        margin: 0 3vh 0 0;
-    }
-    .employeeRole{
-        flex-basis: 75%;
-        text-align: left;
+    .descriptionImg {
+        padding: 0 0 20px 0;
     }
 }
 @media (max-width: 600px){
@@ -105,22 +105,25 @@
     .awardItem {
         padding: 0 5px;
     }
+    .textWrapper {
+        padding: 0 20px;
+    }
     #socialdiv {
         width: 80%;
     }
-    #about h2{
-        padding-left: 7.5%;
+    #mc_embed_signup form {
+        max-width: 400px;
     }
-    .employeeImg{
-        display: none;
-    }
-    .employeeRole{
-        flex-basis: 85%;
+    .description {
+        width: 65vw;
     }
 }
 @media (max-width: 480px){
     h2 {
         font-size: 2em;
             -webkit-text-stroke-width: 0.5px;
+    }
+    #mc_embed_signup form {
+        max-width: 360px;
     }
 }
