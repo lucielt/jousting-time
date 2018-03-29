@@ -36,7 +36,7 @@
     }
 
 }
-@media (max-width: 800px){
+@media only screen and (max-width: 800px){
     #intro {
         height: 75vh;
     }
@@ -98,7 +98,7 @@
         padding: 0 0 20px 0;
     }
 }
-@media (max-width: 600px){
+@media only screen and (max-width: 600px){
     h1 {
         font-size: 4em;
     }
@@ -118,10 +118,10 @@
         width: 65vw;
     }
 }
-@media (max-width: 480px){
+@media only screen and (max-width: 480px){
     h2 {
         font-size: 2em;
-            -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-width: 0.5px;
     }
     #mc_embed_signup form {
         max-width: 360px;
